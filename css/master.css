@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #47494c;
+}
+
+p {
+  padding: 40px 0;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: Hei Regular;
+  text-align: center;
+}
+
+div {
+  margin: 20px auto;
+}
+
+/****利用float属性自动获取宽度；向左偏移50%****/
+
+.box {
+  float: left;
+  position: relative;
+  left: 50%;
+}
+
+/****相对父元素偏移50%；刚好达到居中的效果****/
+
+.main {
+  position: relative;
+  left: -50%
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: #795548;
+}
+
+#sp1 {
+  color: #795548;
+}
+
+.rectangle {
+  width: 200px;
+  height: 100px;
+  background: #ff5722;
+}
+
+#sp2 {
+  color: #ff5722;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background: #ff9800;
+  border-radius: 50%;
+}
+
+#sp3 {
+  color: #ff9800;
+}
+
+.oval {
+  width: 200px;
+  height: 100px;
+  background: #ffc107;
+  border-radius: 100px / 50px;
+}
+
+#sp4 {
+  color: #ffc107;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #ffeb3b;
+}
+
+#sp5 {
+  color: #ffeb3b;
+}
+
+.trapezoid {
+  border-bottom: 100px solid #cddc39;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 100px;
+}
+
+#sp6 {
+  color: #cddc39;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  transform: skew(20deg);
+  background: #8bc34a;
+}
+
+#sp7 {
+  color: #8bc34a;
+}
+
+.pentagon {
+  position: relative;
+  width: 54px;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: #4caf50 transparent;
+}
+
+.pentagon:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent #4caf50;
+}
+
+#sp8 {
+  color: #4caf50;
+}
+
+.chatBox {
+  width: 120px;
+  height: 60px;
+  background: #009688;
+  position: relative;
+  border-radius: 15px;
+}
+
+.chatBox:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 16px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #009688;
+  border-bottom: 13px solid transparent;
+}
+
+#sp9 {
+  color: #009688;
+}
+
+.cone {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 100px solid #00bcd4;
+  border-radius: 50%;
+}
+
+#sp10 {
+  color: #00bcd4;
+}
+
+.cross {
+  width: 20px;
+  height: 120px;
+  background: #03a9f4;
+  position: relative;
+}
+
+.cross::after {
+  content: '';
+  width: 120px;
+  height: 20px;
+  right: -50px;
+  top: 50px;
+  background: #03a9f4;
+  position: absolute;
+}
+
+#sp11 {
+  color: #03a9f4;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 20px 20px 0 0 #2196f3;
+}
+
+#sp12 {
+  color: #2196f3;
+}
+
+.taiChi {
+  position: relative;
+  width: 0;
+  height: 200px;
+  border-left: 100px solid #fff;
+  border-right: 100px solid #000;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #fff;
+  animation:rolling 5s linear 0s infinite;
+}
+
+.taiChi::before, .taiChi::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: -50px;
+}
+
+.taiChi::before {
+  background: #fff;
+  border: 40px solid black;
+}
+
+.taiChi::after {
+  top: 100px;
+  background: black;
+  border: 40px solid #fff;
+}
+
+#sp13 {
+  color: #fff;
+}
+@keyframes rolling{
+   from{
+     transform:rotate(360deg);
+   }
+   to{
+     transform:rotate(0deg);
+   }
